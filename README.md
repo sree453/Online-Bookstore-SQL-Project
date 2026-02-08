@@ -76,34 +76,48 @@ This approach ensures accurate and efficient data transfer without manual script
 After importing the data, SQL queries were executed using the pgAdmin Query Tool for analysis and reporting.
 
 Basic Data Retrieval
+
 SELECT * FROM books;
+
 SELECT * FROM customers;
+
 SELECT * FROM orders;
 
 
 Used to verify and explore stored data.
 
 Customer Purchase Analysis
+
 SELECT c.name, b.title, o.order_date, o.quantity
+
 FROM orders o
+
 JOIN customers c ON o.customer_id = c.customer_id
+
 JOIN books b ON o.book_id = b.book_id;
 
 
 Used to analyze customer buying patterns.
 
 Sales Summary
+
 SELECT b.title, SUM(o.quantity) AS total_sold
+
 FROM orders o
+
 JOIN books b ON o.book_id = b.book_id
+
 GROUP BY b.title;
 
 
 Used to identify best-selling books.
 
 Revenue Analysis
+
 SELECT SUM(b.price * o.quantity) AS total_revenue
+
 FROM orders o
+
 JOIN books b ON o.book_id = b.book_id;
 
 
@@ -158,4 +172,5 @@ Developing frontend integration
 👤 Author
 
 Sreeja Theegala
+
 Aspiring Data Analyst / Database Professional
