@@ -1,5 +1,6 @@
 # Online-Bookstore-SQL-Project
 SQL project for online book store management
+
 📌 Project Overview
 
 This project focuses on designing and implementing a relational database system for an online book store using PostgreSQL. The database was developed by importing structured data from CSV files and organizing it into relational tables.
